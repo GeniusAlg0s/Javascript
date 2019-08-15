@@ -1,0 +1,146 @@
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>javascript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            .circle {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                float: left;
+                margin: 50px;
+            }
+            #redbarren {
+                
+                background-color: red;
+            }
+            #GD {
+                
+                background-color: blue;
+            }#patty {
+                
+                background-color: green;
+            }#mike {
+                
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+           <p id="002">first ever javascript</p>
+            <p>   <button onclick="alert('pandoras box has been opened')">click me!</button> this is some in line javascript</p>
+        </div>
+        <script type="text/javascript">
+            
+           document.getElementById("002").innerHTML = "I changed this text with javascript";
+            
+            </script>
+        <p id="text">hello</p>
+        
+        <button id="001">change text</button>
+            <script type="text/javascript">
+                //changes the text
+                document.getElementById("001").onclick = function(){
+                    alert("you tocuhed the button");
+                    
+    }
+                
+                </script>
+                <p id="111">
+                    this must change
+                </p>
+                 <button id="003">boyah! text</button>
+            <script type="text/javascript">
+                //changes the text
+                document.getElementById("003").onclick = function(){
+                     document.getElementById("111").innerHTML = "I changed this text with javascript too";
+                    
+    }
+                
+                </script>
+                
+                <p id="112">javascript is ...</p>
+                  <button id="006">boyah! keep it up</button>
+            <script type="text/javascript">
+                //changes the text
+                document.getElementById("006").onclick = function(){
+                     document.getElementById("112").innerHTML = "check this out..." + document.getElementById("112").innerHTML + "I added this to the end of text with javascript too";
+                    
+    }
+                
+                </script>
+                <p id="113"></p>
+                  <button id="007">create</button>
+            <script type="text/javascript">
+                //changes the text
+                document.getElementById("007").onclick = function(){
+                     document.getElementById("113").innerHTML = "<h1>check this out..there was nothing and now....." + document.getElementById("112").innerHTML + "I added this to the end of text with javascript too</h1>";
+                    
+    }
+                
+                </script>
+                <h2>level 2 here we come!</h2>
+                <p id="114">we are going to ramp things up a it with javascript</p>
+                
+                <button id="style">look cool</button>
+                
+                <script type="text/javascript">
+                //changes the text
+                document.getElementById("style").onclick = function(){
+                     document.getElementById("114").style.color = "blue";
+                     document.getElementById("114").style.fontSize = "35px";
+                    
+    }
+                
+                </script>
+                <h2>level 3and for my next trick!</h2>
+                <p id="115">we are going to ramp things up a it with javascript....... and for the next act bye bye folks</p>
+                
+                <button id="magic">hudini</button>
+                
+                <script type="text/javascript">
+                //changes the text
+                document.getElementById("magic").onclick = function(){
+                     document.getElementById("111").style.display = "none";
+                     document.getElementById("112").style.display = "none";
+                      document.getElementById("113").style.display = "none";
+                     document.getElementById("114").style.display = "none";
+                      document.getElementById("115").style.display = "none";
+                    
+                    
+    }
+                
+                </script>
+                <h2>circle trick</h2>
+                <p>click a circle and see what happens</p>
+                <div class="circle" id="redbarren"></div>
+                <div class="circle" id="GD"></div>
+                <div class="circle" id="patty"></div>
+                <div class="circle" id="mike"></div>
+                
+                <script>
+                     document.getElementById("redbarren").onclick = function(){
+                         document.getElementById("redbarren").style.display = "none";
+                     }
+                     document.getElementById("GD").onclick = function(){
+                         document.getElementById("GD").style.display = "none";
+                     }
+                     document.getElementById("patty").onclick = function(){
+                         document.getElementById("patty").style.display = "none";
+                     }
+                     document.getElementById("mike").onclick = function(){
+                         document.getElementById("mike").style.display = "none";
+                     }
+                </script>
+                <br>
+                <p>what happened can you guess? hit refresh to play again</p>
+    </body>
+</html>
