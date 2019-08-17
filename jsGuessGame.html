@@ -1,0 +1,64 @@
+!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div><h1>Magic word game</h1></div>
+        <p>what is the magic word</p> 
+        
+        <input type="text" id="guess">
+        <p> <button id="check">guess</button></p>
+        <script>
+            
+             document.getElementById("check").onclick = function(){
+                 
+             var input =  document.getElementById("guess").value;
+             
+             
+            var x = "death";
+            
+            if ( input == x){
+                alert("you may enter!!");
+                
+            } else{
+                alert("... sorry close cigar death is upon you");
+            } 
+        
+        }
+        </script>
+        <p>i guess a random number between 0 and 12 to see if you can get into the mind of the machine</p>
+         <input type="text" id="new">
+        <p> <button id="www">are you magic</button></p>
+        <script>
+             document.getElementById("www").onclick = function(){
+             
+        var user = document.getElementById("new").value;
+        var random = Math.random();
+        
+        random = random * 13;
+        
+        random = Math.floor(random);
+                 
+                 var machine = random;
+                 
+                 if (user == machine){
+                     
+                     alert("The master will be pleased");
+                 } else{
+                     alert("you have been beaten by the machine");
+                 }
+             }
+            
+            
+            
+            </script>
+    </body>
+</html>
