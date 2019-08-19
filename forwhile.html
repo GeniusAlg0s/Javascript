@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="newtweets"></div>
+        
+        <div>
+            <p>enter your number so the machine can check</p>
+            <p><select id="man">
+                    <option>0</option>
+                   <option>1</option>
+                   <option>2</option>
+                   <option>3</option>
+                   <option>4</option>
+                   <option>5</option>
+                   <option>6</option>
+                </select>
+                   
+            </p>
+            <p><button id="smooth">go</button></p>
+        </div>
+        
+        <script type="text/javascript">
+           
+           var tweetstring = "";
+           var whilestring = "";
+           
+           var wtweets = ["one", "two", "three"]
+            var tweets =["hi everyone", "new tweets", "stop the tweets"]
+           
+           var j = 0;
+    
+    for(var i = 0; i < tweets.length; i++){
+                
+                tweetstring = tweetstring + "<p>" + tweets[i] + "</p>";
+            }
+            document.getElementById("newtweets").innerHTML = tweetstring;
+            
+          while (j < wtweets.length){
+                
+                whilestring = whilestring + "<p>" + wtweets[j] + "</p>";
+                
+                j++
+            }
+            
+            document.getElementById("newtweets").innerHTML = document.getElementById("newtweets").innerHTML + whilestring;
+                    + whilestring;
+            
+            document.getElementById("smooth").onclick = function(){
+                
+                 var human = document.getElementById("man").value;
+                 
+                 var gotIt = false;
+                 
+                 var attempts = 1;
+                 
+                 while(gotIt == false){
+                 var devineguess = Math.random();
+                 
+                 devineguess = devineguess * 7;
+                 
+                 devineguess = Math.floor(devineguess);
+                 
+                 if(devineguess == human){
+                     
+                    gotIt = true;
+                    
+                    alert("the devine is devinen, guess was  :" + human + "  and the devine guessed :" + attempts + " times");
+                 } else{
+                     
+                     attempts++;
+                 }
+            }
+        }
+        </script>
+    </body>
+</html>
