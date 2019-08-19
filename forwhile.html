@@ -27,6 +27,19 @@ and open the template in the editor.
                    
             </p>
             <p><button id="smooth">go</button></p>
+              <p>enter your number so the machine can check using a function</p>
+            <p><select id="wo">
+                    <option>0</option>
+                   <option>1</option>
+                   <option>2</option>
+                   <option>3</option>
+                   <option>4</option>
+                   <option>5</option>
+                   <option>6</option>
+                </select>
+                   
+            </p>
+            <p><button id="sm">go</button></p>
         </div>
         
         <script type="text/javascript">
@@ -78,6 +91,47 @@ and open the template in the editor.
                  } else{
                      
                      attempts++;
+                 }
+            }
+        }
+        function qqq(answer){
+          var devineguess = Math.random();
+                 
+                 devineguess = devineguess * 7;
+                 
+                 devineguess = Math.floor(devineguess);
+                 
+                 if(devineguess == answer){
+                     
+                    return (true);
+                    
+                   
+                 } else{
+                     
+                     return(false);
+                 }
+            }
+            
+            
+            document.getElementById("sm").onclick = function(){
+                
+                 var hu = document.getElementById("wo").value;
+                 
+                 var gotIt = false;
+                 
+                 var mattempts = 1;
+                 
+                 while(gotIt == false){
+               
+                 
+                 if(qqq(hu) == true){
+                     
+                    gotIt = true;
+                    
+                    alert("the devine is devinen, guess was  :" + hu + "  and the devine guessed :" + mattempts + " times");
+                 } else{
+                     
+                     mattempts++;
                  }
             }
         }
