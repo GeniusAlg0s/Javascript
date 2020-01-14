@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <!--  <script type="text/javascript">
+            
+            var x = 5;
+            
+            x= 20;
+            
+            var name = "pat";
+            alert("x");
+            alert(x);
+            alert(name);
+        </script>-->
+        <input type="text" id="www">
+        
+        <button id="qqq">make a change</button>
+        
+        
+        <p>type your input in the input box and make the change to change the text below</p>
+        
+        <h1 id="11001">change me</h1>
+        <p>original is     </p>
+    <h1>9,3,7,1,2,5</h1>
+    <p> should be</p>
+        <h1>1,2,3,5,7,9</h1>
+        
+        <h1 id="black">array</h1>
+        <button id="do">make a array</button>
+        <script>
+            document.getElementById("qqq").onclick = function(){
+                
+        var txtinput = "";
+        txtinput = document.getElementById("www").value;
+        
+       document.getElementById("11001").innerHTML = txtinput;
+            }
+              
+         
+          
+         var myArray = new Array();
+            
+            myArray[0] = 9;
+            myArray[1] = 3;
+            myArray[2] = 7;
+             myArray[3] = 1;
+            myArray[4] = 2;
+            myArray[5] = 5;
+             //document.getElementById("black").innerHTML = result;
+             
+            //myArray.sort();
+            function swap(myArray, leftindex, rightindex){
+              var temp = myArray[leftindex];
+              myArray[leftindex] = myArray[rightindex];
+              myArray[rightindex] = temp;
+            }
+        function partition(myArray, left, right){
+         var pivot =  myArray[Math.floor((right+left)/2)];
+                 i = left;
+                 j = right;
+         while (i <= j){
+             
+             while(myArray[i] < pivot){
+                 i++;
+             }
+             while(myArray[j] > pivot){
+                 j--;
+             }
+             if(i <= j){
+                 swap(myArray, i, j);
+                 i++;
+                 j--;
+             }
+         }
+         return i;
+        }
+        function quicksort(myArray, left, right){
+            var index;
+            if(myArray.length > 1){
+                index = partition(myArray, left, right);
+                if(left < index - 1){
+                    quicksort(myArray, left, index - 1)
+                }
+                 if (index < right) { 
+            quicksort(myArray, index, right);
+        }
+            }
+            return myArray;
+        }
+        var result = quicksort(myArray, 0, myArray.length -1);
+        alert(result);
+   document.getElementById("do").onclick = function(){  
+    document.getElementById("black").innerHTML = result;
+}
+ 
+        </script>
+        
+        <script>
+            
+            var myArray = new Array();
+            
+            myArray[0] = 1;
+            myArray[1] = 3;
+            
+          //alert(myArray[0]);
+            //use inspect on browser to see logged array under console
+            console.log(myArray);
+            console.log(myArray.length);
+            
+               
+        </script>
+       
+        <p>hit button for tweet at index 1 to display</p>
+        
+        <button id="zz">show tweet</button>
+        
+        <script>
+         
+            var tweets = ["pissing excellence", "on the way"];
+            
+            tweets.push("here we got", "alomste over");
+             document.getElementById("zz").onclick = function(){
+                 
+              alert(tweets[1]);   
+              
+              
+             }  
+             console.log(tweets);
+             
+             tweets.splice(2,1);
+             
+              tweets.splice(2,0, "this is so  cool", "it is");
+               tweets.splice(0,1,"new beginings" );
+             console.log(tweets);
+        </script>
+            
+    </body>
+</html>
